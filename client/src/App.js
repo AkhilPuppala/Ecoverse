@@ -8,6 +8,9 @@ import OngoingEvents from './pages/OngoingEvents';
 import PageNotFound from './pages/PageNotFound';
 import SignUpPage from './pages/SignUpPage';
 import YourParticipations from './pages/YourParticipations';
+import EventDetails from './pages/EventDetails';
+import YourEvents from './pages/YourEvents';
+import ParticipantsList from './pages/ParticipantsList';
 
 export default function App(){
   return(
@@ -15,7 +18,10 @@ export default function App(){
       <Routes>
         <Route path = '/*' element = {<PageNotFound />}   />
         <Route path = '/' element = {<HomePage />}   />
+        <Route path = '/participantslist/:eid' element = {<ParticipantsList />}   />
+        <Route path = '/yourevents' element = {<YourEvents />}   />
         <Route path = '/hostanevent' element = {<HostAnEvent />}   />
+        <Route path = '/event-details/:title/:eid' element = {<EventDetails />}   />
         <Route path = '/yourparticipations' element = {<YourParticipations />}   />
         <Route path = '/ongoingevents' element = {<OngoingEvents />}   />
         <Route path = '/about' element = {<AboutPage/>}   />

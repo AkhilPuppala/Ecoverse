@@ -1,5 +1,6 @@
 import { comaprePassword, hashPassword } from "../helpers/authHelper.js";
 import userModel from "../models/userModel.js";
+import eventModel from "../models/eventModel.js";
 import JWT from 'jsonwebtoken';
 
 export const registerController = async(req,res) => {
@@ -69,6 +70,7 @@ export const loginController = async(req,res) => {
                 name: user.name,
                 email: user.email,
                 phone: user.phone,
+                _id:user._id,
             },
             token,
         });
@@ -83,3 +85,68 @@ export const loginController = async(req,res) => {
         })
     }
 }
+
+
+export const participateController = async(req,res) => {
+    try{ 
+        const {eid} = req.params;
+        const event = await eventModel.findById(eid)
+        let eventusers = event.users;
+        const olduser = await userModel.findById(req.user._id)
+        let userevents = olduser.events;
+       // console.log(eventusers)
+        for(let i=0;i<userevents.length;i++)
+        {
+            if(userevents[i]._id.equals(event._id))
+            {
+                console.log("present")
+                return res.status(200).send({
+                    success:true,
+                    message:'already registered for the event'
+                })
+                
+            }
+        }
+        userevents.push(event);
+       // console.log(eventusers)
+        const user = await userModel.findByIdAndUpdate(req.user._id,{events:userevents},{new:true}).populate('events')
+        eventusers.push(user);
+        const newev= await eventModel.findByIdAndUpdate(event._id,{users:eventusers},{new:true});
+
+        res.status(200).send({
+            success:true,
+            message:"registered for the event successfully",
+            user
+        })
+
+    }
+    catch(error)
+    {
+        console.log(error);
+        res.status(500).send({
+            success:false,
+            message:"error has occured"
+        })
+    }
+}
+
+
+export const getParticipatedEventsController = async(req,res) => {
+    try{
+        const user = await userModel.findById(req.user._id)
+        const events = user.events;
+        res.status(200).send({
+            success:true,
+            events
+        })
+    }
+    catch(error)
+    {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:"error while getting prods"
+        })
+    }
+}
+  

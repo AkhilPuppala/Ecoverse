@@ -25,7 +25,7 @@ nav {
 .dashboard:hover {
   background-color: gray;
   color: white !important;
-  padding: 10px 10px;
+  transform: scale(1.1);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -39,27 +39,183 @@ nav {
 .matter{
   height: 760px;
   width: auto;
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./background.jpeg)
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+  overflow: hidden
 }
 .a{
   font-size:80px;
   position: relative;
-  top:200px;
+  top:100px;
   margin-left: 300px;
   color:white;
 }
-h2{
-  color:white; 
+.headers h2{
+  font-size:40px;
+  text-align: center;
   position: relative;
-  top:230px;
-  margin-left: 500px;
+  top:100px;
+  color:white;
 }
-.row{
+.hp{
   position: relative;
-  top:300px;
-  margin-left: 300px;
+  top:220px;
+  left:150px
 }
 
 .nav-link {
   text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+  margin: 0;
+  padding: 0; /* Prevent vertical scrolling */
+}
+
+.box {
+  padding-top: 60px;
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 400px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: gainsboro;
+}
+
+.box h2 {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.container {
+  background-attachment: fixed; /* Fix background image to viewport */
+}
+
+.box2{
+  padding-top: 60px;
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 400px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: gainsboro;
+}
+
+.container2 {
+  background-attachment: fixed; /* Fix background image to viewport */
+}
+.box2 h2{
+  text-align: center;
+  padding: 0 0 20px 0;
+
+}
+.box3{
+  padding-top: 60px;
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  width: 400px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.container3 {
+  background-attachment: fixed; /* Fix background image to viewport */
+}
+.box4 h2{
+  text-align: center;
+  padding: 0 0 20px 0;
+
+}
+.box4{
+  padding-top: 60px;
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  width: 400px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: gainsboro;
+}
+
+.container4 {
+  background-attachment: fixed; /* Fix background image to viewport */
+}
+.box4 h2{
+  text-align: center;
+  padding: 0 0 20px 0;
+
+}
+.oe{
+  text-align: center;
+  color:white;
+  font-size: 60px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.card{
+  border-radius: 25px;
+}
+#submit{
+  border-radius: 10px;
+}
+#eventdetails{
+  padding-top: 30px;
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  width: 400px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: gainsboro;
+}
+#Event{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#yourpart{
+  text-align: center;
+  color:white;
+  font-size: 60px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+#yourevents{
+  text-align: center;
+  color:white;
+  font-size: 60px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
