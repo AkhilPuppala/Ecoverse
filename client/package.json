@@ -1,8 +1,11 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "devDependencies": {
     "gh-pages": "^5.0.0"
 =======
+=======
+>>>>>>> parent of 3b2c64f... fianlcode
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -41,6 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
+>>>>>>> parent of 3b2c64f... fianlcode
+=======
 >>>>>>> parent of 3b2c64f... fianlcode
   }
 }
