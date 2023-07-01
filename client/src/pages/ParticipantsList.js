@@ -14,7 +14,6 @@ const ParticipantsList = () => {
             if(data?.success)
             {
                 setUsers(data?.eventusers)
-
             }
         }
         catch(error)
