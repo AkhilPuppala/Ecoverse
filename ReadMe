@@ -1,3 +1,4 @@
+Download the code from the github link or the zip file attatched and open the zip file prensent in the folder.
 Please download react,react-router-dom and axios in the client folder.
-Download the code from the github link or the zip file attatched.
-Now type `npm run dev`.
+Now come back to the source folder.
+Now type `npm run dev` in the terminal.
