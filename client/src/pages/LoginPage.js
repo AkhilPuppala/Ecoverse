@@ -33,7 +33,6 @@ const LoginPage = () => {
 
       }
       catch(error){
-        console.log(error)
         toast.error("something went wrong")
       }
 

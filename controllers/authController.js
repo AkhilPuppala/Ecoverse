@@ -29,7 +29,6 @@ export const registerController = async(req,res) => {
         })
 
     }catch(error){
-        console.log(error);
         res.send({
             success:false,
             message:"Error in registration",
@@ -77,7 +76,6 @@ export const loginController = async(req,res) => {
 
 
     }catch(error){
-        console.log(error);
         res.send({
             success:false,
             message:"Error in login",
@@ -94,12 +92,10 @@ export const participateController = async(req,res) => {
         let eventusers = event.users;
         const olduser = await userModel.findById(req.user._id)
         let userevents = olduser.events;
-       // console.log(eventusers)
         for(let i=0;i<userevents.length;i++)
         {
             if(userevents[i]._id.equals(event._id))
             {
-                console.log("present")
                 return res.status(200).send({
                     success:true,
                     message:'already registered for the event'
@@ -108,7 +104,6 @@ export const participateController = async(req,res) => {
             }
         }
         userevents.push(event);
-       // console.log(eventusers)
         const user = await userModel.findByIdAndUpdate(req.user._id,{events:userevents},{new:true}).populate('events')
         eventusers.push(user);
         const newev= await eventModel.findByIdAndUpdate(event._id,{users:eventusers},{new:true});
@@ -122,7 +117,6 @@ export const participateController = async(req,res) => {
     }
     catch(error)
     {
-        console.log(error);
         res.status(500).send({
             success:false,
             message:"error has occured"
@@ -142,7 +136,6 @@ export const getParticipatedEventsController = async(req,res) => {
     }
     catch(error)
     {
-        console.log(error)
         res.status(500).send({
             success:false,
             message:"error while getting prods"

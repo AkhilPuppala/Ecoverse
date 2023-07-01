@@ -19,7 +19,6 @@ const YourEvents = () => {
         setEvents(data?.events);
       }
     } catch (error) {
-      console.log(error);
     }
   };
   useEffect(() => {

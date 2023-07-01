@@ -43,7 +43,6 @@ const SignUpPage = () => {
         alert('Failure while registering');
       }
     } catch (error) {
-      console.log(error);
     }
   };
 

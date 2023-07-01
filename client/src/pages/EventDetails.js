@@ -38,7 +38,6 @@ const EventDetails = () => {
         {
           setHost(1)
         }
-        console.log(event)
       }
       else
       {
@@ -48,29 +47,23 @@ const EventDetails = () => {
     }
     catch(error)
     {
-      console.log(error)
       toast.error("something went wrong")
     }
   }
   
   const participate = async() =>{
     try{
-      console.log(auth?.token)
-      console.log('/n')
       const dat = localStorage.getItem('auth')
-      console.log(auth.token)
         const {data} = await axios.put(`http://localhost:8080/api/v1/auth/participate/${params.eid}`)
 
         if(data?.success)
         {
           toast.success(data?.message)
          // navigate('/yourparticipations');
-          console.log(data?.user?.events)
         }
     }
     catch(error)
     {
-      console.log(error)
       toast.error("something went wrong")
     }
   }

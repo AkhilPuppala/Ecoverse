@@ -13,26 +13,19 @@ const HostAnEvent = () => {
   const [date,setDate] = useState("");
   const [auth,setAuth] = useAuth();
   const [time,setTime] = useState()
-  // console.log(auth);
-  // const [users,setUsers] = useState([]);
   const navigate = useNavigate();
 
   const handleSubmit = async(e) =>{
     e.preventDefault();
     let id = auth?.user?._id;
-    console.log(id);
     try {
-      console.log("hi")
       const {data} = await axios.post(`http://localhost:8080/api/v1/event/create-event`,{title,description,place,date,time});
-      console.log(data);
       if (data?.success)
       {
         toast.success("Event created successfully");
         navigate("/");
       }
     } catch (error) {
-      console.log(error);
-      //console.log("Hi");
     }
   }
 
@@ -44,7 +37,6 @@ const HostAnEvent = () => {
   //       setUsers(users);
   //     }
   //   } catch (error) {
-  //     console.log(error);
   //   }
   // }
 

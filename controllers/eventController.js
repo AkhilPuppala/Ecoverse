@@ -4,14 +4,10 @@ import userModel from "../models/userModel.js";
 
 
 export const createEventController = async(req,res) =>{
-  console.log(req.body);
 try {
 const {title,description,place,date,time} = req.body;
   const organiser = req.user._id;
 
-  // console.log(req.params);
-  // console.log(req.user._id);
-  // console.log(req.body);
 if(!title || !description || !place || !date ||!time || !organiser){
 return res.status(501).send({
 success:false,
@@ -26,7 +22,6 @@ event,
 })
 
 } catch (error) {
-console.log(error);
 return res.status(500).send({
 message:'Error in organising an event',
 success:false,
@@ -48,7 +43,6 @@ export const getAllEventsController = async(req,res) =>{
     }
     catch(error)
     {
-        console.log(error);
         res.status(500).send({
             success:false,
             message:"error while fetching events"
@@ -69,7 +63,6 @@ export const getEventController = async(req,res) =>{
     }
     catch(error)
     {
-        console.log(error);
         res.status(500).send({
             success:false,
             message:"error while fetching events"
@@ -101,7 +94,6 @@ export const removeEventFromUserController = async (req, res) => {
       message: "Successfully deleted event",
     });
   } catch (error) {
-    console.log(error);
     res.send({
       success: false,
       message: "Error while deleting event",
@@ -121,7 +113,6 @@ export const getHostedEventsController = async(req,res) => {
   }   
   catch(error)
   {
-      console.log(error)
       res.status(500).send({
           success:false,
           message:"error while fetching hosted events"
@@ -140,7 +131,6 @@ export const getEventUsersController = async(req,res) => {
       })
   }
   catch(error){
-      console.log(error)
       res.status(200).send({
           success:true,
           message:"error while fetching users of event"

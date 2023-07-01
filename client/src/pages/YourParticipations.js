@@ -8,10 +8,8 @@ import toast from "react-hot-toast";
 const YourParticipations = () => {
   const [events, setEvents] = useState([]);
   const [auth, setAuth] = useAuth();
-  console.log(auth?.user);
   const getPEvents = async () => {
     try {
-      console.log(localStorage.getItem("auth"));
       const { data } = await axios.get(
         "http://localhost:8080/api/v1/auth/your-participations",
         {
@@ -22,10 +20,8 @@ const YourParticipations = () => {
       );
       if (data?.success) {
         setEvents(data?.events);
-        console.log(events);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -45,7 +41,6 @@ const YourParticipations = () => {
         getPEvents();
       }
     }catch(error){
-      console.log(error);
     }
   }
 
