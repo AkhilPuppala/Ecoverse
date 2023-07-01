@@ -54,7 +54,6 @@ const HostAnEvent = () => {
 
   return (
     <Layout>
-<<<<<<< HEAD
         <div className='container4'>
           <div className='box4'>
         <h1 className='text-center'>Host An Event</h1>
@@ -104,7 +103,6 @@ const HostAnEvent = () => {
         </form>
         </div>
         </div>
-=======
         <div className='container'>
         <h1 className='text-center'>Host An Event</h1>
         <form>
@@ -123,7 +121,6 @@ const HostAnEvent = () => {
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         </div>
->>>>>>> 5f67b004c28220ea3806f167687fdeff6cc45c7b
     </Layout>
   )
 }
