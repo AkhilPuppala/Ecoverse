@@ -5,77 +5,58 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <Layout>
-      <div className="matter">
-        <div className="headers">
-          <h1 className="a">Want to be a environmentalist!!</h1>
-          <h2 className="head2">
-            SignUp for free and be a part of our community
-          </h2>
-        </div>
         <div className="hp">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
+          <h2 id="title">Want to be an environmentalist??</h2>
+          <h4 id="subtitle">Sign Up for free and join our community!!</h4>
+          <div class="row">
             <div class="col">
               <Link to="/ongoingevents" class="text-decoration-none">
-              <div class="card"  style={{ width: "30rem",height:"10rem"}}>
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">ON GOING EVENTS</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
+              <div class="card" id="firstimage" style={{width: "20rem",height:"20rem"}}>
+                  <img src="./ongoingevents.jpg" class="card-img-top" alt="..." style={{width: "20rem",height:"15rem"}}/>
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardtitle">ON GOING EVENTS</h5>
+                    <p class="card-text" id="carddesc">Check all the events happening</p>
+                  </div>
                 </div>
-              </div>
               </Link>
             </div>
             <div class="col">
             <Link to="/yourparticipations" class="text-decoration-none">
-              <div class="card" style={{ width: "30rem",height:"10rem"}}>
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">YOUR PARTICIPATIONS</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
+              <div class="card" id="secondimage" style={{width: "20rem",height:"20rem"}}>
+                  <img src="./yourparticipations.jpg" class="card-img-top" alt="..." style={{width: "20rem",height:"15rem"}}/>
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardtitle">YOUR PARTICIPATIONS</h5>
+                    <p class="card-text" id="carddesc">Check all the events you participated</p>
+                  </div>
                 </div>
-              </div>
               </Link>
             </div>
+            </div>
+            <div class="row">
             <div class="col">
             <Link to="/hostanevent" class="text-decoration-none">
-              <div class="card" style={{ width: "30rem",height:"10rem"}} >
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">HOST AN EVENTS</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content.
-                  </p>
+              <div class="card" id="thirdimage" style={{width: "20rem",height:"20rem"}}>
+                  <img src="./hostanevent.avif" class="card-img-top" alt="..." style={{width: "20rem",height:"15rem"}}/>
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardtitle">HOST AN EVENT</h5>
+                    <p class="card-text" id="carddesc">Want to host an event!</p>
+                  </div>
                 </div>
-              </div>
               </Link>
             </div>
             <div class="col">
             <Link to="/yourevents" class="text-decoration-none">
-              <div class="card" style={{ width: "30rem",height:"10rem"}}>
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">YOUR EVENTS</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
+              <div class="card" id="fourthimage" style={{width: "20rem",height:"20rem"}}>
+                  <img src="./yourevents.jpg" class="card-img-top" alt="..." style={{width: "20rem",height:"15rem"}}/>
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardtitle">YOUR EVENTS</h5>
+                    <p class="card-text" id="carddesc">See the events you participated</p>
+                  </div>
                 </div>
-              </div>
               </Link>
             </div>
+            </div>
           </div>
-        </div>
-      </div>
     </Layout>
   );
 };

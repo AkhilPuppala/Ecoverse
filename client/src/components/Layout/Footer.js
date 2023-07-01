@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer'>
-        <footer className='text-center'>
-        <h4 className='text-center'>Footer</h4>
+        <footer className='d-flex justify-content-center'>
+        <h4 className='d-flex justify-content-center'>All rights Reserved</h4>
         </footer>
     </div>
   )

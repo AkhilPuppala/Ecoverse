@@ -16,34 +16,34 @@ const AboutPage = () => {
           We believe that rallies are powerful catalysts for change. They provide a platform for individuals to voice their concerns, share knowledge, and express their dedication to environmental causes. 
           We hope that everyone makes use of this very efficiently and take steps towards protecting environment.
           </div>
-          <h1 style={{color:'LightGreen',fontSize:50}}>Created By</h1>
-          <div className='d-flex flex-wrap' style={{color:'white'}}>
+          <h1  id="create" tyle={{color:'LightGreen',fontSize:50}}>Created By</h1>
+          <div className='d-flex flex-wrap' id="aboutus" style={{color:'white'}}>
           <div className="card m-2" style={{width:18+'em'}}>
               {/* <img className="card-img-top" src="" alt="Card image cap"/> */}
               <div className="card-body">
                 <h5 className="card-title">Akhil</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>              
+                <p className="card-text">Full stack developer</p>              
               </div>
           </div>
           <div className="card m-2" style={{width:18+'em'}}>
               {/* <img className="card-img-top" src="" alt="Card image cap"/> */}
               <div className="card-body">
                 <h5 className="card-title">Charan</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>              
+                <p className="card-text">Full stack developer</p>              
               </div>
           </div>
           <div className="card m-2" style={{width:18+'em'}}>
               {/* <img className="card-img-top" src="" alt="Card image cap"/> */}
               <div className="card-body">
                 <h5 className="card-title">Nikhil</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>              
+                <p className="card-text">Full stack developer</p>              
               </div>
           </div>
           <div className="card m-2" style={{width:18+'em'}}>
               {/* <img className="card-img-top" src={img1} alt="Card image cap"/> */}
               <div className="card-body">
                 <h5 className="card-title">Raghunadh</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>              
+                <p className="card-text">Full stack developer</p>              
               </div>
           </div>
           </div>
