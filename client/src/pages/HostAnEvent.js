@@ -54,6 +54,7 @@ const HostAnEvent = () => {
 
   return (
     <Layout>
+<<<<<<< HEAD
         <div className='container4'>
           <div className='box4'>
         <h1 className='text-center'>Host An Event</h1>
@@ -103,6 +104,26 @@ const HostAnEvent = () => {
         </form>
         </div>
         </div>
+=======
+        <div className='container'>
+        <h1 className='text-center'>Host An Event</h1>
+        <form>
+          <div className="mb-3">
+            <input type="text" className="form-control" id="exampleInputTitle1"  placeholder='Enter title of the event'/>
+          </div>
+          <div className="mb-3">
+            <input type="text" className="form-control" id="exampleInputDescription1"  placeholder='Enter description of the event'/>
+          </div>
+          <div className="mb-3">
+            <input type="text" className="form-control" id="exampleInputPlace1"  placeholder='Enter place of the event'/>
+          </div>
+          <div className="mb-3">
+            <input type="text" className="form-control" id="exampleInputDate1"  placeholder='Enter date of the event'/>
+          </div>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
+        </div>
+>>>>>>> 5f67b004c28220ea3806f167687fdeff6cc45c7b
     </Layout>
   )
 }
